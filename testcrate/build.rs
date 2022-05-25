@@ -9,6 +9,8 @@ fn main() {
     let version = factorio_lua_src::Lua53;
     #[cfg(feature = "lua54")]
     let version = factorio_lua_src::Lua54;
+    #[cfg(feature = "lua-factorio")]
+    let version = factorio_lua_src::LuaFactorio52;
 
     let artifacts = factorio_lua_src::Build::new().build(version);
     artifacts.print_cargo_metadata();
